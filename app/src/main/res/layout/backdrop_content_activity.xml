@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/purple_500">
+
+    <TextView
+        android:id="@+id/txtFiltros"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Filtros"
+        android:fontFamily="@font/donkey"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btnApplyChanges"
+        app:layout_constraintEnd_toEndOf="@id/btnApplyChanges"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnApplyChanges"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:fontFamily="@font/donkey"
+        android:text="Aplicar cambios"
+        android:textColor="@color/white"
+        app:elevation="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbEnvioGratis"
+        app:rippleColor="@color/white"
+        app:strokeColor="@color/white" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        app:trackHeight="2dp"
+        app:trackColorActive="#00BCD4"
+        app:trackColorInactive="#FF5722"
+        app:haloColor="#FFEB3B"
+        app:haloRadius="12dp"
+        app:thumbStrokeWidth="1dp"
+        app:thumbStrokeColor="@color/purple_500"
+        app:thumbRadius="6dp"
+        app:thumbElevation="2dp"
+        app:thumbColor="#00BCD4"
+        android:valueFrom="0"
+        android:valueTo="100"
+        android:value="80"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/btnApplyChanges"
+        app:layout_constraintEnd_toEndOf="@id/btnApplyChanges"
+        app:layout_constraintTop_toBottomOf="@id/txtFiltros"/>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/rangeSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:stepSize="10"
+        android:valueFrom="0"
+        android:valueTo="100"
+        app:haloColor="#FFEB3B"
+        app:haloRadius="12dp"
+        app:layout_constraintEnd_toEndOf="@id/btnApplyChanges"
+        app:layout_constraintStart_toStartOf="@id/btnApplyChanges"
+        app:layout_constraintTop_toBottomOf="@id/slider"
+        app:thumbColor="#00BCD4"
+        app:thumbElevation="2dp"
+        app:thumbRadius="6dp"
+        app:thumbStrokeColor="@color/purple_500"
+        app:thumbStrokeWidth="1dp"
+        app:tickColor="#FF1100"
+        app:tickVisible="true"
+        app:trackColorActive="#00BCD4"
+        app:trackColorInactive="#B3000000"
+        app:trackHeight="2dp"
+        app:values="@array/initial_slider_values" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:text="Envio gratis"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/donkey"
+        android:id="@+id/cbEnvioGratis"
+        android:checked="false"
+        app:buttonTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/btnApplyChanges"
+        app:layout_constraintStart_toStartOf="@id/btnApplyChanges"
+        app:layout_constraintTop_toBottomOf="@id/rangeSlider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

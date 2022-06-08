@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="16dp"
+    android:layout_margin="8dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="24sp"
+    android:padding="24dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:checkable="true"
+    android:id="@+id/cardContainer">
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Producto"
+        android:textColor="@color/black"
+        android:layout_gravity="top|start"
+        android:fontFamily="@font/coldiac"
+        android:maxWidth="140dp"
+        android:maxLines="1"
+        android:textAppearance="?attr/textAppearanceHeadline5"/>
+
+    <TextView
+        android:id="@+id/productBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marca"
+        android:maxWidth="140dp"
+        android:maxLines="1"
+        android:layout_gravity="center|start"
+        android:fontFamily="@font/coldiac"
+        android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+    <TextView
+        android:id="@+id/productDescription"
+        android:layout_width="wrap_content"
+        android:maxWidth="140dp"
+        android:layout_height="wrap_content"
+        android:text="Descripcion abcsdegghihkkidjjakgjsjq"
+        android:layout_gravity="bottom|start"
+        android:fontFamily="@font/coldiac"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="?attr/textAppearanceSubtitle1"/>
+
+    <ImageView
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/imgCard"
+        android:layout_gravity="end"
+        android:layout_width="220dp"
+        android:layout_height="100dp"/>
+
+
+</com.google.android.material.card.MaterialCardView>

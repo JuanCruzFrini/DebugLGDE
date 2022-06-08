@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/parentContainer">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:trackColor="@color/teal_200"
+        app:indicatorColor="#FF3D00"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+<!--        app:trackCornerRadius="16dp"-->
+
+    <TextView
+        android:id="@+id/txtFiltros"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Promediar materia"
+        android:fontFamily="@font/donkey"
+        android:textSize="40sp"
+        android:textColor="@color/purple_500"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@id/tilTest1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tilTest1"
+        app:layout_constraintEnd_toEndOf="@id/tilTest1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tilTest1"
+        android:hint="Examen 1"
+        app:endIconMode="clear_text"
+        android:elevation="10dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFiltros"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/coldiac"
+            android:id="@+id/etTest1"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tilTest2"
+        android:hint="Examen 2"
+        app:endIconMode="clear_text"
+        android:elevation="10dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilTest1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/coldiac"
+            android:id="@+id/etTest2"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tilTest3"
+        android:hint="Examen 3"
+        app:endIconMode="clear_text"
+        android:elevation="10dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilTest2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/coldiac"
+            android:id="@+id/etTest3"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPromediar"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="promediar"
+        android:fontFamily="@font/donkey"
+        app:elevation="10dp"
+        app:rippleColor="@color/purple_200"
+        app:strokeColor="@color/purple_500"
+        android:elegantTextHeight="true"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilTest3"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/btnPromediar"
+        app:layout_constraintStart_toStartOf="@id/btnPromediar"
+        app:layout_constraintTop_toBottomOf="@+id/btnPromediar"
+        app:startIconDrawable="@drawable/location_icon"
+        app:startIconTint="@color/purple_500">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coldiac"
+            android:hint="Location"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBottomSheetDialog"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Bottom sheet dialog"
+        android:fontFamily="@font/donkey"
+        app:elevation="10dp"
+        app:rippleColor="@color/purple_200"
+        app:strokeColor="@color/purple_500"
+        android:elegantTextHeight="true"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout"/>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        app:trackHeight="2dp"
+        app:trackColorActive="#00BCD4"
+        app:trackColorInactive="#FF5722"
+        app:haloColor="#FFEB3B"
+        app:haloRadius="12dp"
+        app:thumbStrokeWidth="1dp"
+        app:thumbStrokeColor="@color/purple_500"
+        app:thumbRadius="6dp"
+        app:thumbElevation="2dp"
+        app:thumbColor="#00BCD4"
+        android:valueFrom="0"
+        android:valueTo="100"
+        android:value="80"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/btnBottomSheetDialog"
+        app:layout_constraintEnd_toEndOf="@id/btnBottomSheetDialog"
+        app:layout_constraintTop_toBottomOf="@id/btnBottomSheetDialog"/>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/rangeSlider"
+        app:trackHeight="2dp"
+        app:trackColorActive="#00BCD4"
+        app:trackColorInactive="#B3000000"
+        app:haloColor="#FFEB3B"
+        app:haloRadius="12dp"
+        app:thumbStrokeWidth="1dp"
+        app:thumbStrokeColor="@color/purple_500"
+        app:thumbRadius="6dp"
+        app:thumbElevation="2dp"
+        app:thumbColor="#00BCD4"
+        app:tickVisible="true"
+        app:tickColor="#FF1100"
+        app:values="@array/initial_slider_values"
+        android:valueFrom="0"
+        android:valueTo="100"
+        android:stepSize="10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/btnBottomSheetDialog"
+        app:layout_constraintEnd_toEndOf="@id/btnBottomSheetDialog"
+        app:layout_constraintTop_toBottomOf="@id/slider"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToBackDropActivity"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Go To BackDrop Activity"
+        android:fontFamily="@font/donkey"
+        app:elevation="10dp"
+        app:rippleColor="@color/purple_200"
+        app:strokeColor="@color/purple_500"
+        android:elegantTextHeight="true"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rangeSlider"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
