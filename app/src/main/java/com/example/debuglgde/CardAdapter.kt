@@ -1,25 +1,23 @@
-package com.example.debuglgde.backdropactivity
+package com.example.debuglgde
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.debuglgde.Card
-import com.example.debuglgde.R
 import com.example.debuglgde.databinding.CardViewBinding
 
 class CardAdapter(private val cardsList:MutableList<Card>) : RecyclerView.Adapter<CardAdapter.ViewHolder>() {
 
     private var context:Context? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context = parent.context
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_view, parent, false))
 
     }
 
-    override fun onBindViewHolder(holder: CardAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val card = cardsList[position]
 
         holder.binding.productName.text = card.name

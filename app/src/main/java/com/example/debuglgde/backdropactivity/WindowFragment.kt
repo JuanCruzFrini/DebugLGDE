@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.debuglgde.Card
+import com.example.debuglgde.CardAdapter
 import com.example.debuglgde.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -15,7 +16,7 @@ class WindowFragment : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
 
     private var currentState: Int = BottomSheetBehavior.STATE_EXPANDED
 
-    private var adapter:CardAdapter? = null
+    private var adapter: CardAdapter? = null
 
     var cardsCount = 0
 
